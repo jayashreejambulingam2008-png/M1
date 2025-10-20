@@ -1,17 +1,26 @@
 
 # EX-01-Datatypes-Operators
 ## AIM:
-Write a C program to read 3 characters one by one and print the characters in a reverse order.
+Write a C program to initialize the character as z & display the same character.
 
 ## ALGORITHM:
-1.	Declare three character variables to store the input characters.
-2.	Use the scanf function to read the characters one by one from the user.
-3.	Print the characters in reverse order using the printf function.
-4.	End the program.
+1. Start the program.
+2. Declare a variable ch of type char.
+3. Initialize the variable ch with the character 'z'.
+4. Use the printf function to display the value of ch.
+5. End the program.
 
 ## PROGRAM:
-
+```
+#include<stdio.h>
+int main(){
+    char ch='z';
+    printf("%c",ch);
+    return 0;
+}
+```
 ## OUTPUT:
+<img width="973" height="204" alt="image" src="https://github.com/user-attachments/assets/7d2c4d74-84ab-4aaf-82a6-ae48c4ec4f66" />
 
 
 
@@ -30,24 +39,37 @@ Write a C program to read 3 characters one by one and print the characters in a 
 
 
 ## RESULT:
-Thus the program to read 3 characters one by one and print the characters in a reverse order has been executed successfully.
+Thus the program to initialize the character as z & display the same character has been executed successfully.
 
 
 # EX-02- Conditional-Statements
 ## AIM:
-Write a C program to read A values and check whether A is positive number or not.
+Write a C program to check whether the grade is A grade using simple if statement?
 
 # ALGORITHM:
-1.	Declare a variable to store the input value A.
-2.	Use the scanf function to read the value of A from the user.
-3.	Check if the value of A is greater than zero.
-4.	If A is greater than zero, print a message indicating that it's a positive number. 
-5.	Otherwise, print a message indicating that it's not a positive number.
-6.End the program.
+1. Start the program.
+2. Declare a variable grade of type char.
+3. Read the character input from the user and store it in grade.
+4. Check if the value of grade is equal to 'A'.
+5. If true, then display the message “Grade is A”.
+   If false, do nothing (no output).
+6. End the program.
 
 # PROGRAM:
-
+```
+#include<stdio.h>
+int main()
+{
+    char grade;
+    scanf("%c",&grade);
+    if(grade=='A'){
+        printf(" Grade is A");
+    }
+    return 0;
+}
+```
 # OUTPUT:
+<img width="986" height="208" alt="image" src="https://github.com/user-attachments/assets/c3e62f36-0a48-42e3-b738-4ddfeddd149e" />
 
 
 
@@ -60,7 +82,7 @@ Write a C program to read A values and check whether A is positive number or not
 
 
 # RESULT:
-Thus the program to read A values and check whether A is positive number or not has been executed successfully.
+Thus the program to check whether the grade is A grade using simple if statement has been executed successfully.
  
  
  
@@ -68,20 +90,40 @@ Thus the program to read A values and check whether A is positive number or not 
 
 # EX-03- Operators-Expressions
 ## AIM:
-Write a program to find minimum between two fraction numbers using conditional operator or ternary operator.
+Write a C program to find simple interest & compound interest. Note: Inputs are principle, year and rate of interest.
 
 ## ALGORITHM:
-1.	Declare variables to store the two fraction numbers and the result.
-2.	Use the printf function to prompt the user to enter the first fraction number (numerator and denominator separately).
-3.	Use the scanf function to read the numerator and denominator of the first fraction.
-4.	Repeat steps 2 and 3 to get the second fraction from the user.
-5.	Calculate the decimal values of both fractions by dividing the numerators by the denominators.
-6.	Use the conditional (ternary) operator to compare the decimal values and store the minimum value in the result variable.
-7.	Print the minimum value.
+1. Start the program.
+2. Declare variables p, t, r, si, and ci of type float.
+p → Principal amount
+t → Time in years
+r → Rate of interest
+si → Simple Interest
+ci → Compound Interest
+3. Read the values of p, t, and r from the user.
+4. Calculate Simple Interest (SI) using the formula:
+SI=(𝑝×𝑡×𝑟)/100
+5. Calculate Compound Interest (CI) using the formula:
+CI=𝑝×(pow((1+𝑟/100),t)
+6. Display the calculated values of SI and CI.
+7. End the program.
 
 ## PROGRAM:
-
+```
+#include <stdio.h>
+#include<math.h>
+int main(){
+    float p,t,r,si,ci;
+    scanf("%f %f %f",&p,&t,&r);
+    si=(p*t*r)/100;
+    ci=p*pow((1+(r/100)),t);
+    printf("Simple Interest = %.2f\n",si);
+    printf("Compound Interest = %.2f\n",ci);
+    return 0;
+}
+```
 ## OUTPUT:
+<img width="981" height="395" alt="image" src="https://github.com/user-attachments/assets/264def6f-bf21-490f-9804-b8e75336d9ab" />
 
 
 
@@ -92,7 +134,7 @@ Write a program to find minimum between two fraction numbers using conditional o
 
 
 ## RESULT:
-Thus the program to find minimum between two fraction numbers using conditional operator or ternary operator has been executed successfully.
+Thus the program to find simple interest & compound interest has been executed successfully.
 
 
 
@@ -100,19 +142,35 @@ Thus the program to find minimum between two fraction numbers using conditional 
 # EX-04- Using Conditional Statements
 
 ## AIM:
-Write a C program to check whether the input value is equal to 1 using simple if statement
+Write a C program to read the age of a candidate and determine whether he/she is eligible for casting his/her own vote for election.
 
 ## ALGORITHM:
-1.	Declare a variable to store the input value.
-2.	Use the scanf function to read the input value from the user.
-3.	Use an if statement to check if the input value is equal to 1.
-4.	If the condition in the if statement is true, print a message indicating that the input value is equal to 1.
-5.	Otherwise, print a message indicating that it's not equal to 1.
-6.	End the program.
+1. Start the program.
+2. Declare a variable age of type int.
+3. Read the value of age from the user.
+4. Check if age is greater than or equal to 18.
+If true, display “Eligible for casting your vote”.
+If false, display “Not Eligible to caste your vote”.
+5. End the program.
 
 ## PROGRAM:
-
+```
+#include <stdio.h>
+int main()
+{
+    int age;
+    scanf("%d",&age);
+    if(age>=18){
+        printf("Eligible for casting your vote");
+    }else{
+        printf("Not Eligible to caste your vote\n");
+    }
+    
+ return 0;   
+}
+```
 ## OUTPUT:
+<img width="979" height="317" alt="image" src="https://github.com/user-attachments/assets/21d91629-d46c-45b5-b23b-10eb596ee1ae" />
 
 
 
@@ -125,31 +183,44 @@ Write a C program to check whether the input value is equal to 1 using simple if
 	
 
 ## RESULT:
-Thus the program to check whether the input value is equal to 1 using simple if statement has been executed successfully
+Thus the program to read the age of a candidate and determine whether he/she is eligible for casting his/her own vote for election has been executed successfully
 
 
 
-# EX-05- Calculating Total, Percentage, And Division Using Conditional Statements 
+# EX-05- Calculating Total, Percentage, Average 
 ## AIM:
-To write a C program that reads marks of three subjects, calculates the total and percentage, and then determines the division (First, Second, Pass, or Fail) based on the percentage and minimum marks criteria.
+Write a C program to calculate total, average and percentage of three subjects for engineering admission.
 ## ALGORITHM:
-1.	Start
-2.	Declare integer variables m1, m2, m3 for marks, and float variables tot, per.
-3.	Input the marks for three subjects.
-4.	Calculate total marks: tot = m1 + m2 + m3
-5.	Calculate percentage: per = tot / 3
-6.	Display total and percentage.
-7.	Check if all marks are greater than or equal to 40:
-8.	If yes:
-a.	If percentage >= 60: Print “Division = First”
-b.	Else if percentage >= 48: Print “Division = Second”
-c.	Else if percentage >= 36: Print “Division = Pass”
-9.	Else: Print “Division = Fail”
-10.	End
+1. Start the program.
+2. Declare variables a, b, c, total, average, and percentage of type float.
+3. Read the marks of three subjects (a, b, and c) from the user.
+4. Calculate the total marks using the formula:
+total=𝑎+𝑏+𝑐
+5. Calculate the average marks using the formula:
+average=(𝑎+𝑏+𝑐)/3
+6. Calculate the percentage using the formula:
+percentage=((𝑎+𝑏+𝑐)/300)×100
+(Here, 300 is the maximum total marks for three subjects, each out of 100).
+7. Display the total, average, and percentage.
+8. End the program.
 ## PROGRAM:
-
+```
+#include <stdio.h>
+int main(){
+    float a,b,c,total,average,percentage;
+    scanf("%f %f %f",&a,&b,&c);
+    total=(a+b+c);
+    average=(a+b+c)/3;
+    percentage=((a+b+c)/300)*100;
+    printf("Total marks = %.2f\n",total);
+    printf("Average marks = %.2f\n",average);
+    printf("Percentage = %.2f\n",percentage);
+    return 0;
+}
+```
 ## OUTPUT:
+<img width="975" height="475" alt="image" src="https://github.com/user-attachments/assets/cf164cb5-1837-46b8-9831-160a003e88a0" />
 
 ## RESULT:
-The program successfully takes three subject marks, calculates the total and percentage, and correctly determines the division based on predefined grading logic.
+The program to calculate total, average and percentage of three subjects for engineering admission has been executed succesfully.
 
